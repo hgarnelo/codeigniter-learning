@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'default';
+$active_group = 'localci';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -82,4 +82,26 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
+);
+
+$db['localci'] = array(
+    'dsn'	=> '',
+    'hostname' => 'mysql:host=localhost;dbname=test',
+    'username' => 'ci',
+    'password' => 'test',
+    'database' => 'test',
+    'dbdriver' => 'PDO',
+    'dbprefix' => '',
+    'pconnect' => TRUE,
+    'db_debug' => TRUE,
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => TRUE,
+    'failover' => array(),
+    'save_queries' => TRUE
 );
